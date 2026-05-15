@@ -1,0 +1,98 @@
+:root {
+    --wine: #880d1e;
+    --red: #dd2d4a;
+    --dark-pink: #f26a8d;
+    --light-pink: #f49cbb;
+    --light-blue: #cbeef3;
+    --font-title: 'Fredoka', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-text);
+    min-height: 100vh;
+    /* IMAGEM NO FUNDO DE TUDO */
+    background: 
+        linear-gradient(rgba(203, 238, 243, 0.7), rgba(203, 238, 243, 0.7)), 
+        url('chat.gpt.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Centralizando o título principal */
+header {
+    text-align: center;
+    padding: 2rem;
+    color: var(--wine);
+}
+
+/* A GRADE DE CARDS */
+.grid-container {
+    display: grid;
+    /* Cria as colunas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza a grade na tela */
+}
+
+/* O CARD (O quadradinho branco que sumiu) */
+.card {
+    background: white; /* Volta a cor branca */
+    border-radius: 20px;
+    padding: 25px;
+    border: 3px solid var(--light-pink);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    
+    /* Centraliza o conteúdo dentro do card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between; /* Alinha o botão sempre embaixo */
+    min-height: 320px;
+}
+
+.operator-symbol {
+    background: var(--light-blue);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--red);
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-family: var(--font-title);
+    color: var(--wine);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #444;
+    flex-grow: 1; /* Faz o texto ocupar o meio */
+}
+
+/* O BOTÃO TESTAR LÓGICA */
+.btn-test {
+    background: var(--dark-pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: var(--font-title);
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn-test:hover {
+    background: var(--red);
+    transform: scale(1.05);
+}
